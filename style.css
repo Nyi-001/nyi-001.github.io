@@ -606,6 +606,28 @@ body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, 
   display: block;
 }
 
+/* illustration banner on service cards — tinted per category */
+.art-tile {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-color: color-mix(in srgb, var(--cat, var(--accent)) 32%, var(--border));
+  background: var(--bg-2);
+  background:
+    repeating-linear-gradient(45deg,
+      color-mix(in srgb, var(--cat, var(--accent)) 6%, transparent) 0 10px,
+      transparent 10px 20px),
+    color-mix(in srgb, var(--cat, var(--accent)) 9%, var(--bg-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--cat, var(--accent));
+}
+.art-tile svg { width: 66%; height: 66%; }
+
 /* writeup sub-headings (e.g. HackMD / repositories) */
 .writeup-sub {
   font-family: var(--mono);
