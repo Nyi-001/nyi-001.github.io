@@ -204,6 +204,24 @@ section[id] { scroll-margin-top: 76px; }
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
+/* hero: profile photo beside the name */
+.hero-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 26px);
+}
+.hero-name h1 { margin-bottom: 0; }
+.hero-avatar {
+  width: clamp(76px, 13vw, 112px);
+  height: clamp(76px, 13vw, 112px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-dim), 0 0 36px rgba(74, 222, 128, .22);
+}
+
 .nav-links { display: flex; gap: 24px; list-style: none; }
 .nav-links a {
   font-family: var(--mono);
