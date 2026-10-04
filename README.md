@@ -63,9 +63,10 @@ cards with the example card that's commented out above them:
 3. Add a card to the `writeups` section in `index.html`
    (there's a commented example at the bottom of the post grid)
 
-### Add a skill / service / timeline entry / project card
+### Add a skill / service / project / timeline entry / writeup card
 - Skill: add a `<span class="tag">...</span>` inside any `.tags` group.
 - Service: copy a `.card` block in the `services` section.
+- Project: copy a `.card` block in the `projects` section.
 - Timeline: copy a `.t-item` block in the `journey` section.
 - Writeup card: copy any `.card` in the `writeups` grid.
 - Most cards and entries have a commented example right next to them.

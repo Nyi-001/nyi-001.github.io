@@ -43,9 +43,10 @@
       <li><a href="#skills"><span class="num">02</span>skills</a></li>
       <li><a href="#services"><span class="num">03</span>services</a></li>
       <li><a href="#journey"><span class="num">04</span>journey</a></li>
-      <li><a href="#certs"><span class="num">05</span>certs</a></li>
-      <li><a href="#writeups"><span class="num">06</span>writeups</a></li>
-      <li><a href="#contact"><span class="num">07</span>contact</a></li>
+      <li><a href="#projects"><span class="num">05</span>projects</a></li>
+      <li><a href="#certs"><span class="num">06</span>certs</a></li>
+      <li><a href="#writeups"><span class="num">07</span>writeups</a></li>
+      <li><a href="#contact"><span class="num">08</span>contact</a></li>
     </ul>
     <div class="nav-actions">
       <button class="nav-icon-btn" id="themeToggle" aria-label="Toggle dark/light mode">
@@ -155,10 +156,8 @@
         <h3>Offensive</h3>
         <div class="tags">
           <span class="tag">Web Security</span>
-          <span class="tag">Penetration Testing</span>
-          <span class="tag">Red Teaming (aspiring)</span>
+          <span class="tag">Infrastructure Pentest</span>
           <span class="tag">Recon &amp; OSINT</span>
-          <span class="tag">Burp Suite</span>
         </div>
       </div>
       <div class="skill-group reveal">
@@ -167,19 +166,16 @@
           <span class="tag">Digital Forensics</span>
           <span class="tag">Network Analysis</span>
           <span class="tag">Endpoint Analysis</span>
-          <span class="tag">Wireshark</span>
           <span class="tag">Log Analysis</span>
+          <span class="tag">Steganography</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3>Languages &amp; Tools</h3>
+        <h3>Languages</h3>
         <div class="tags">
-          <span class="tag">Python</span>
           <span class="tag">PHP</span>
-          <span class="tag">TypeScript</span>
+          <span class="tag">Python</span>
           <span class="tag">Bash</span>
-          <span class="tag">Linux (Kali)</span>
-          <span class="tag">Git</span>
         </div>
       </div>
     </div>
@@ -322,12 +318,48 @@
   </section>
 
   <!-- ============================================================
+       PROJECTS
+       ============================================================ -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">05.</span><h2>projects</h2><span class="line"></span>
+      </div>
+      <p class="sec-sub reveal">Things I've built — more coming as they ship.</p>
+      <div class="grid">
+        <!-- copy a .card block to add a project -->
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+          <h3><a href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">SP1D3R</a></h3>
+          <p>Web security testing assistant — scoped web &amp; API assessments with HTML/PDF/JSON reporting.</p>
+          <div class="card-meta">
+            <span class="chip neutral">Python</span>
+            <a class="read-more" href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">View Repo ↗</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>More projects — coming soon</h3>
+          <p>This space is reserved for the next build.</p>
+          <div class="card-meta"><span class="chip neutral">wip</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>More projects — coming soon</h3>
+          <p>This space is reserved for the next build.</p>
+          <div class="card-meta"><span class="chip neutral">wip</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        CERTIFICATIONS & COURSES
        ============================================================ -->
   <section id="certs" class="alt">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="num">05.</span><h2>certifications</h2><span class="line"></span>
+        <span class="num">06.</span><h2>certifications</h2><span class="line"></span>
       </div>
       <p class="sec-sub reveal">Completed courses and certificates. Upload an image or PDF to the <code>certs/</code> folder on GitHub and the card appears here automatically — see the README.</p>
       <div class="grid" id="certGrid">
@@ -367,7 +399,7 @@
   <section id="writeups">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="num">06.</span><h2>writeups &amp; blog</h2><span class="line"></span>
+        <span class="num">07.</span><h2>writeups &amp; blog</h2><span class="line"></span>
       </div>
       <p class="sec-sub reveal">Everything I solve gets documented — challenges, labs, and investigations.</p>
 
@@ -401,7 +433,7 @@
       <div class="grid">
         <!-- To add a new HackMD note: copy a card and swap the link/title/date/excerpt -->
         <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="preview"><img src="https://hackmd.io/_uploads/rJHkFR4DGg.jpg" alt="Halftone Studio cover" loading="lazy"></div>
           <h3><a href="https://hackmd.io/@sh1n0b1Xby73/O_fLO79PTSez4yI_3zSpuQ" target="_blank" rel="noopener">Halftone Studio</a></h3>
           <p>Web exploitation writeup — walkthrough of the Halftone Studio challenge on webversepro.</p>
           <div class="card-meta">
@@ -410,7 +442,7 @@
           </div>
         </article>
         <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="preview"><img src="https://hackmd.io/_uploads/rJHcZ4mwMe.jpg" alt="PageSpeed Outsides cover" loading="lazy"></div>
           <h3><a href="https://hackmd.io/@sh1n0b1Xby73/RtJubrBPS1GJ3HpTFz6leg" target="_blank" rel="noopener">PageSpeed Outsides</a></h3>
           <p>Web exploitation writeup — the PageSpeed Outsides challenge from SKILLBIT.</p>
           <div class="card-meta">
@@ -419,7 +451,7 @@
           </div>
         </article>
         <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="preview"><img src="https://hackmd.io/_uploads/HyJj-lsLGx.jpg" alt="Untrustworthy Resource Locator cover" loading="lazy"></div>
           <h3><a href="https://hackmd.io/@sh1n0b1Xby73/Fi0iMLmvRXiY4plYyiT1uQ" target="_blank" rel="noopener">Untrustworthy Resource Locator</a></h3>
           <p>Web exploitation writeup — SKILLBIT's Untrustworthy Resource Locator challenge.</p>
           <div class="card-meta">
@@ -428,7 +460,7 @@
           </div>
         </article>
         <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="preview"><img src="https://hackmd.io/_uploads/S1I01z58fg.jpg" alt="More Than Meet the Eyes cover" loading="lazy"></div>
           <h3><a href="https://hackmd.io/@sh1n0b1Xby73/A6nVnObfQZCvv4_ZjBL8_A" target="_blank" rel="noopener">More Than Meet the Eyes</a></h3>
           <p>Web exploitation writeup — SKILLBIT challenge: finding what's hidden in plain sight.</p>
           <div class="card-meta">
@@ -437,7 +469,7 @@
           </div>
         </article>
         <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="preview"><img src="https://hackmd.io/_uploads/S18AGYK8Gg.jpg" alt="Interactive-Protection cover" loading="lazy"></div>
           <h3><a href="https://hackmd.io/@sh1n0b1Xby73/O_WZZQEBQ3iXjO4Eeh3rNA" target="_blank" rel="noopener">Interactive-Protection</a></h3>
           <p>Web exploitation writeup — bypassing SKILLBIT's Interactive-Protection challenge.</p>
           <div class="card-meta">
@@ -500,16 +532,6 @@
           </div>
         </article>
 
-        <article class="card reveal">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-          <h3><a href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">SP1D3R — Web Security Testing Assistant</a></h3>
-          <p>Tool release notes: scoped web/API assessments with clean HTML/PDF/JSON reporting.</p>
-          <div class="card-meta">
-            <span>2026-09-06</span>
-            <a class="read-more" href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </article>
-
         <!-- EXAMPLE — how to add a post:
         <article class="card">
           <div class="card-icon">...icon...</div>
@@ -538,7 +560,7 @@
   <section id="contact" class="alt">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="num">07.</span><h2>contact</h2><span class="line"></span>
+        <span class="num">08.</span><h2>contact</h2><span class="line"></span>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">

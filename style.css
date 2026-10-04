@@ -588,6 +588,24 @@ body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, 
   display: block;
 }
 
+/* thumbnail preview on writeup cards (e.g. HackMD covers) */
+.preview {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+}
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
 /* writeup sub-headings (e.g. HackMD / repositories) */
 .writeup-sub {
   font-family: var(--mono);
