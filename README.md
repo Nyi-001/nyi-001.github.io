@@ -56,10 +56,11 @@ cards with the example card that's commented out above them:
 - Writeup card: copy any `.card` in the `writeups` grid.
 - Most cards and entries have a commented example right next to them.
 
-### Receive contact-form messages
-The form opens the visitor's mail app. Change `you@example.com` to your real
-address — it appears in `index.html` in three places: the hero mail icon,
-the contact links, and the `TO` variable at the top of the contact-form script.
+### Contact form & email
+The form opens the visitor's mail app with the message pre-filled and sends
+to `ny1m1nh737@gmail.com`. If you change your address later, it appears in
+`index.html` in three places: the hero mail icon, the contact links, and the
+`TO` variable at the top of the contact-form script.
 
 ### Theme tweaks
 Colors and fonts are CSS variables at the top of `style.css` — change
