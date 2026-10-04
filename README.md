@@ -2,8 +2,9 @@
 
 My cybersecurity portfolio, live at **[nyi-001.github.io](https://nyi-001.github.io)**.
 
-Terminal-themed static site — plain HTML/CSS, no build step. Everything is hosted
-straight from this repo by GitHub Pages (branch: `main`, root folder).
+Clean modern static site — plain HTML/CSS, no build step, dark/light theme,
+mobile responsive. Everything is hosted straight from this repo by GitHub Pages
+(branch: `main`, root folder).
 
 ## Structure
 
@@ -19,15 +20,14 @@ straight from this repo by GitHub Pages (branch: `main`, root folder).
 
 ### Add a certification
 1. Put the image in `certs/` (e.g. `certs/oswe.png`)
-2. In `index.html`, in the `certs` section, replace one of the `cert-slot`
-   placeholders with the example card that's commented out right below them:
+2. In `index.html`, in the `certs` section, replace one of the placeholder
+   `.box` cards with the example card that's commented out above them:
    ```html
-   <div class="cert-card">
-     <img src="certs/oswe.png" alt="OSWE">
-     <div class="meta">
-       <div class="t">Offensive Security Web Expert</div>
-       <div class="d">OffSec · 2026 · <a href="#">verify</a></div>
-     </div>
+   <div class="box">
+     <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate"></div>
+     <h3>Offensive Security Web Expert</h3>
+     <p>Advanced web app attacks and exploitation.</p>
+     <div class="cert-issuer">OffSec · 2026 · <a href="#">verify</a></div>
    </div>
    ```
    (The card can be a PDF link too: swap `<img src="...">` for
@@ -39,10 +39,10 @@ straight from this repo by GitHub Pages (branch: `main`, root folder).
 3. Add a card to the `blog` section in `index.html` (there's a commented
    example right below the first post)
 
-### Add a project / writeup card
-Copy any card in the `projects` or `writeups` section of `index.html`,
-change the title, description, tags and link. Star counts on some cards
-update automatically from the GitHub API.
+### Add a project / writeup / skill / timeline entry
+Copy any `.box` card in the `projects` or `writeups` section of `index.html`
+(and any `.skill` bar or `.t-item` timeline entry), then change the title,
+description, chips and link. Skill bars take a `data-width="85"` percentage.
 
 ## Publishing workflow
 
