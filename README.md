@@ -37,8 +37,9 @@ Everything is hosted straight from this repo by GitHub Pages (branch: `main`, ro
 3. Add a card to the `writeups` section in `index.html`
    (there's a commented example at the bottom of the post grid)
 
-### Add a skill / timeline entry / project card
+### Add a skill / service / timeline entry / project card
 - Skill: add a `<span class="tag">...</span>` inside any `.tags` group.
+- Service: copy a `.card` block in the `services` section.
 - Timeline: copy a `.t-item` block in the `journey` section.
 - Writeup card: copy any `.card` in the `writeups` grid.
 - Most cards and entries have a commented example right next to them.
@@ -50,7 +51,9 @@ the contact links, and the `TO` variable at the top of the contact-form script.
 
 ### Theme tweaks
 Colors and fonts are CSS variables at the top of `style.css` — change
-`--accent`, `--bg`, `--mono`, etc. there.
+`--accent`, `--bg`, `--mono`, etc. there. The ☀/☾ button in the navbar
+switches to the light theme (defined in the `body.light` block, right below
+the dark variables); the visitor's choice is remembered in their browser.
 
 ## Publishing workflow
 
