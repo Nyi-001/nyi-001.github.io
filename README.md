@@ -2,17 +2,17 @@
 
 My cybersecurity portfolio, live at **[nyi-001.github.io](https://nyi-001.github.io)**.
 
-Clean modern static site — plain HTML/CSS, no build step, dark/light theme,
-mobile responsive. Everything is hosted straight from this repo by GitHub Pages
-(branch: `main`, root folder).
+Handcrafted security-themed static site — plain HTML/CSS + a few lines of vanilla JS.
+No frameworks, no build step, one font request, mobile responsive, dark by design.
+Everything is hosted straight from this repo by GitHub Pages (branch: `main`, root folder).
 
 ## Structure
 
 ```
 .
-├── index.html          # the portfolio (edit this)
-├── style.css           # terminal/CRT theme
-├── blog/               # blog posts — one HTML file per post
+├── index.html          # the single-page portfolio (edit this)
+├── style.css           # theme — colors & fonts live in :root at the top
+├── blog/               # blog posts / writeups — one HTML file per post
 └── certs/              # certification images
 ```
 
@@ -21,28 +21,36 @@ mobile responsive. Everything is hosted straight from this repo by GitHub Pages
 ### Add a certification
 1. Put the image in `certs/` (e.g. `certs/oswe.png`)
 2. In `index.html`, in the `certs` section, replace one of the placeholder
-   `.box` cards with the example card that's commented out above them:
+   cards with the example card that's commented out above them:
    ```html
-   <div class="box">
-     <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate"></div>
+   <div class="card">
+     <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate" loading="lazy"></div>
      <h3>Offensive Security Web Expert</h3>
-     <p>Advanced web app attacks and exploitation.</p>
-     <div class="cert-issuer">OffSec · 2026 · <a href="#">verify</a></div>
+     <p>Advanced web application attacks and exploitation.</p>
+     <div class="card-meta"><span>OffSec · 2026</span><a class="read-more" href="#">verify ↗</a></div>
    </div>
    ```
-   (The card can be a PDF link too: swap `<img src="...">` for
-   `<a href="certs/my-cert.pdf">view PDF</a>` — style it however you like.)
 
-### Publish a blog post
+### Publish a writeup / blog post
 1. Copy the template: `cp blog/hello-world.html blog/my-post.html`
 2. Edit title, date, and body
-3. Add a card to the `blog` section in `index.html` (there's a commented
-   example right below the first post)
+3. Add a card to the `writeups` section in `index.html`
+   (there's a commented example at the bottom of the post grid)
 
-### Add a project / writeup / skill / timeline entry
-Copy any `.box` card in the `projects` or `writeups` section of `index.html`
-(and any `.skill` bar or `.t-item` timeline entry), then change the title,
-description, chips and link. Skill bars take a `data-width="85"` percentage.
+### Add a skill / timeline entry / project card
+- Skill: add a `<span class="tag">...</span>` inside any `.tags` group.
+- Timeline: copy a `.t-item` block in the `journey` section.
+- Writeup card: copy any `.card` in the `writeups` grid.
+- Most cards and entries have a commented example right next to them.
+
+### Receive contact-form messages
+The form opens the visitor's mail app. Change `you@example.com` to your real
+address — it appears in `index.html` in three places: the hero mail icon,
+the contact links, and the `TO` variable at the top of the contact-form script.
+
+### Theme tweaks
+Colors and fonts are CSS variables at the top of `style.css` — change
+`--accent`, `--bg`, `--mono`, etc. there.
 
 ## Publishing workflow
 

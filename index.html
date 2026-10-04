@@ -3,441 +3,490 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0e0e0e">
-  <title>sh1n0b1Xby73 — Cybersecurity Student</title>
-  <meta name="description" content="Portfolio of sh1n0b1Xby73 — cybersecurity student. Certifications, CTF writeups, blog, and security tools.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 8 90 24v26c0 22-17 37-40 42C27 87 10 72 10 50V24z' fill='none' stroke='%232cd626' stroke-width='8'/%3E%3Cpath d='M36 50l10 10 20-22' fill='none' stroke='%232cd626' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0a0e0c">
+
+  <!-- SEO -->
+  <title>sh1n0b1Xby73 — Cyber Security Student | Red Teamer | CTF Player</title>
+  <meta name="description" content="Portfolio of sh1n0b1Xby73 — third-year Cyber Security student at UCSY. Write-ups, certifications, CTF experience, and security tools.">
+  <meta name="author" content="sh1n0b1Xby73">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nyi-001.github.io/">
+  <meta property="og:title" content="sh1n0b1Xby73 — Cyber Security Student">
+  <meta property="og:description" content="Write-ups, certifications, CTF experience, and security tools. Web security enthusiast and aspiring red teamer.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230a0e0c'/%3E%3Ctext x='24' y='68' font-size='44' fill='%234ade80' font-family='monospace'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+  <!-- fonts: one request, two families (no Inter/Roboto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" aria-label="Primary">
   <div class="nav-inner">
-    <a href="#home" class="logo">sh1n0b1<span>Xby73</span></a>
+    <a href="#top" class="logo"><span class="prompt">&gt;_</span> sh1n0b1</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#certs">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#writeups">Writeups</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about"><span class="num">01</span>about</a></li>
+      <li><a href="#skills"><span class="num">02</span>skills</a></li>
+      <li><a href="#journey"><span class="num">03</span>journey</a></li>
+      <li><a href="#certs"><span class="num">04</span>certs</a></li>
+      <li><a href="#writeups"><span class="num">05</span>writeups</a></li>
+      <li><a href="#contact"><span class="num">06</span>contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
-        <svg class="icon" id="iconMoon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon" id="iconSun" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
-      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu">
-        <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="avatar reveal">&lt;/&gt;</div>
-    <p class="hi reveal">Hi there 👋 I'm</p>
-    <h1 class="reveal">sh1n0b1<span class="accent">Xby73</span></h1>
-    <p class="typed reveal">I'm a <span id="typed"></span><span class="caret"></span></p>
-    <p class="sub reveal">
-      Cybersecurity student breaking and securing things — web app security, CTFs,
-      digital forensics, and the writeups to prove it.
-    </p>
-    <div class="hero-btns reveal">
-      <a href="#projects" class="btn primary">View My Work</a>
-      <a href="#contact" class="btn ghost">Contact Me</a>
-    </div>
-    <div class="socials reveal">
-      <a href="https://github.com/Nyi-001" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg class="icon filled" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      <a href="mailto:you@example.com" aria-label="Email">
-        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-      </a>
-      <!-- more socials — copy this pattern:
-      <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg class="icon filled" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-      </a>
-      -->
-    </div>
-  </div>
-  <a href="#about" class="scroll-down" aria-label="Scroll down">
-    <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-  </a>
-</section>
+<main id="main">
 
-<!-- ================= ABOUT ================= -->
-<section id="about">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">About</span>
-      <h2>About Me</h2>
-      <p>A quick look at who I am and what I do.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          I'm a <strong>cybersecurity student</strong> documenting my journey in public — offensive
-          web security, digital forensics, steganography, and CTFs. I practice on
-          <strong>PortSwigger labs</strong> and CTF challenges, keep detailed solving notes, and
-          build small tools like <strong>SP1D3R</strong>, a scoped web/API security testing assistant.
-        </p>
-        <p>
-          Everything on this site — certifications, writeups, blog posts, and projects — was written,
-          solved, or built by me. If it's worth learning, it's worth writing down.
-        </p>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="top">
+    <div class="container">
+      <p class="prompt-line reveal">$ whoami<span class="cursor">&nbsp;</span></p>
+      <h1 class="reveal">sh1n0b1<span class="accent">Xby73</span></h1>
+      <p class="title reveal">
+        Cyber Security Student <span class="sep">|</span> Red Teamer <span class="sep">|</span> CTF Player
+      </p>
+      <p class="tagline reveal">
+        Third-year Cyber Security student at the University of Computer Studies, Yangon.
+        I break things to learn how they work — then I write it all down.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#writeups" class="btn primary">Read My Write-ups
+          <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contact" class="btn ghost">Get In Touch</a>
       </div>
-      <div class="stats reveal">
-        <div class="stat"><div class="num">09</div><div class="lbl">GitHub Repos</div></div>
-        <div class="stat"><div class="num">04</div><div class="lbl">Writeup Repos</div></div>
-        <div class="stat"><div class="num">01</div><div class="lbl">CTF Played</div></div>
-        <div class="stat"><div class="num">24/7</div><div class="lbl">Always Learning</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CERTIFICATIONS ================= -->
-<section id="certs">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Certifications</span>
-      <h2>Certifications</h2>
-      <p>Credentials I've earned on the way.</p>
-    </div>
-    <div class="grid-3">
-      <!-- To add a real cert: put the image in certs/ (e.g. certs/oswe.png) and replace a placeholder box:
-      <div class="box reveal">
-        <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate"></div>
-        <h3>Offensive Security Web Expert</h3>
-        <p>Advanced web app attacks and exploitation.</p>
-        <div class="cert-issuer">OffSec · 2026 · <a href="#" target="_blank" rel="noopener">verify</a></div>
-      </div>
-      -->
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
-        <h3>Your Certification</h3>
-        <p>Drop the image in <code>certs/</code> and un-comment the example card — instructions in the README.</p>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
-        <h3>Your Certification</h3>
-        <p>Drop the image in <code>certs/</code> and un-comment the example card — instructions in the README.</p>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
-        <h3>Your Certification</h3>
-        <p>Drop the image in <code>certs/</code> and un-comment the example card — instructions in the README.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Skills</span>
-      <h2>My Skills</h2>
-      <p>What I bring to the table — adjust these numbers any time.</p>
-    </div>
-    <div class="skills-grid">
-      <div class="skill reveal"><div class="skill-top"><span>Web App Security</span><span class="pct">85%</span></div><div class="track"><div class="fill" data-width="85"></div></div></div>
-      <div class="skill reveal"><div class="skill-top"><span>API Security</span><span class="pct">70%</span></div><div class="track"><div class="fill" data-width="70"></div></div></div>
-      <div class="skill reveal"><div class="skill-top"><span>Digital Forensics</span><span class="pct">75%</span></div><div class="track"><div class="fill" data-width="75"></div></div></div>
-      <div class="skill reveal"><div class="skill-top"><span>Steganography</span><span class="pct">65%</span></div><div class="track"><div class="fill" data-width="65"></div></div></div>
-      <div class="skill reveal"><div class="skill-top"><span>Python Scripting</span><span class="pct">80%</span></div><div class="track"><div class="fill" data-width="80"></div></div></div>
-      <div class="skill reveal"><div class="skill-top"><span>Bash &amp; Linux</span><span class="pct">78%</span></div><div class="track"><div class="fill" data-width="78"></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WRITEUPS ================= -->
-<section id="writeups">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Writeups &amp; Notes</span>
-      <h2>Writeups &amp; Lab Notes</h2>
-      <p>Everything I solve gets documented.</p>
-    </div>
-    <div class="grid-4">
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>UCSYCTF2026-writeups</h3>
-        <p>CTF challenge writeups — what I solved, how, and what I learned.</p>
-        <div class="box-foot"><span class="chip">2026</span><a class="arrow" href="https://github.com/Nyi-001/UCSYCTF2026-writeups" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>PortSwigger-Labs-Notes</h3>
-        <p>Solving notes for PortSwigger Web Security Academy labs.</p>
-        <div class="box-foot"><span class="chip">2026</span><a class="arrow" href="https://github.com/Nyi-001/PortSwigger-Labs-Notes" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>Forensic-Investigation</h3>
-        <p>Network forensic investigation notes and case walkthroughs.</p>
-        <div class="box-foot"><span class="chip">2026</span><a class="arrow" href="https://github.com/Nyi-001/Forensic-Investigation" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>Advance-Endpoint-Analysis</h3>
-        <p>Endpoint analysis techniques and notes.</p>
-        <div class="box-foot"><span class="chip">2026</span><a class="arrow" href="https://github.com/Nyi-001/Advance-Endpoint-Analysis" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Projects</span>
-      <h2>Projects &amp; Tools</h2>
-      <p>Things I've built to make security work easier.</p>
-    </div>
-    <div class="grid-3">
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
-        <h3>SP1D3R</h3>
-        <p>Web security testing assistant — scoped web &amp; API assessments with HTML/PDF/JSON reporting.</p>
-        <div class="box-foot"><span class="chip">Python</span><a class="arrow" href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>Web-Pentesting-Cheat-Sheet</h3>
-        <p>Web pentesting cheatsheet — techniques, payloads and references in one place.</p>
-        <div class="box-foot"><span class="chip">PHP</span><a class="arrow" href="https://github.com/Nyi-001/Web-Pentesting-Cheat-Sheet" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-        <h3>Steganography-tools</h3>
-        <p>Collection of steganography tools for CTF challenges.</p>
-        <div class="box-foot"><span class="chip">Tools</span><a class="arrow" href="https://github.com/Nyi-001/Steganography-tools" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <h3>Pwned-sites</h3>
-        <p>Web hacking practice archive — labs and notes.</p>
-        <div class="box-foot"><span class="chip">HTML</span><a class="arrow" href="https://github.com/Nyi-001/Pwned-sites" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>hacker-s-archive</h3>
-        <p>Hacker's archive web app — work in progress.</p>
-        <div class="box-foot"><span class="chip">TypeScript</span><a class="arrow" href="https://github.com/Nyi-001/hacker-s-archive" target="_blank" rel="noopener" aria-label="Open repo"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon filled" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
-        <h3>More on GitHub</h3>
-        <p>See every repo, fork, and experiment on my GitHub profile.</p>
-        <div class="box-foot"><span class="chip neutral">@Nyi-001</span><a class="arrow" href="https://github.com/Nyi-001" target="_blank" rel="noopener" aria-label="Open GitHub"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= JOURNEY ================= -->
-<section id="journey">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Journey</span>
-      <h2>Experience &amp; Education</h2>
-      <p>The path so far.</p>
-    </div>
-    <div class="timeline">
-      <!-- add more items by copying one .t-item block -->
-      <div class="t-item reveal">
-        <span class="t-date">2026</span>
-        <h3>UCSY CTF 2026</h3>
-        <div class="t-sub">CTF Player</div>
-        <p>Played and documented challenges — full writeups in my UCSYCTF2026-writeups repo.</p>
-      </div>
-      <div class="t-item reveal">
-        <span class="t-date">2025 — present</span>
-        <h3>Web Security Practice</h3>
-        <div class="t-sub">Self-driven · PortSwigger Academy</div>
-        <p>Solving Web Security Academy labs and keeping detailed notes on every technique.</p>
-      </div>
-      <div class="t-item reveal">
-        <span class="t-date">2025 — present</span>
-        <h3>Security Tooling</h3>
-        <div class="t-sub">Side projects</div>
-        <p>Building tools like SP1D3R — scoped web/API assessment automation with clean reporting.</p>
-      </div>
-      <div class="t-item reveal">
-        <span class="t-date">Your years</span>
-        <h3>Your University / Degree</h3>
-        <div class="t-sub">B.Sc. in Cybersecurity (or your program)</div>
-        <p>Replace this with your education details.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BLOG ================= -->
-<section id="blog">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Blog</span>
-      <h2>From the Blog</h2>
-      <p>Writeups, notes, and things I'm learning.</p>
-    </div>
-    <div class="grid-3">
-      <!-- To add a post: copy blog/hello-world.html to blog/my-post.html, edit it,
-           then add a card here (there's a commented example below). -->
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <h3>Hello, world — launching this site</h3>
-        <p>How this portfolio works and how I publish writeups and notes here.</p>
-        <div class="box-foot"><span class="chip">2026-10-04</span><a class="arrow" href="blog/hello-world.html" aria-label="Read post"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      <!-- EXAMPLE — how to add a post:
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <h3>Title of my post</h3>
-        <p>One-line summary shown on the homepage.</p>
-        <div class="box-foot"><span class="chip">2026-10-10</span><a class="arrow" href="blog/my-post.html" aria-label="Read post"><svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-      </div>
-      -->
-      <div class="box reveal">
-        <div class="box-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <h3>Next post — coming soon</h3>
-        <p>CTF writeups and lab deep-dives are on the way.</p>
-        <div class="box-foot"><span class="chip neutral">soon</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">Contact</span>
-      <h2>Get In Touch</h2>
-      <p>Questions, collabs, or just to say hi.</p>
-    </div>
-    <div class="contact-box reveal">
-      <h3>Let's Work Together</h3>
-      <p>Open to CTF teams, security projects, and learning together. Reach me on GitHub or by email.</p>
-      <a href="https://github.com/Nyi-001" target="_blank" rel="noopener" class="btn primary">
-        <svg class="icon filled" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        GitHub
-      </a>
-      <a href="mailto:you@example.com" class="btn ghost">
-        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-        Email Me
-      </a>
-      <div class="contact-links">
+      <div class="socials reveal">
         <a href="https://github.com/Nyi-001" target="_blank" rel="noopener" aria-label="GitHub">
           <svg class="icon filled" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn (add your profile URL)">
+          <svg class="icon filled" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
         </a>
         <a href="mailto:you@example.com" aria-label="Email">
           <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
         </a>
       </div>
     </div>
-  </div>
-</section>
+    <a href="#about" class="scroll-hint">scroll ↓</a>
+  </section>
 
-<!-- ================= FOOTER ================= -->
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">01.</span><h2>about</h2><span class="line"></span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a third-year <strong>Cyber Security student at the University of Computer Studies, Yangon</strong>,
+            with a deep interest in offensive security. My goal is to become a <strong>red teamer</strong> —
+            understanding systems well enough to find what others miss.
+          </p>
+          <p>
+            Most of my time goes into <strong>web security</strong>: PortSwigger labs, hands-on practice,
+            and my own tooling like <a href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">SP1D3R</a>.
+            I also play <strong>CTFs</strong> — I competed in UCSY CTF 2026 and publish writeups of the challenges I solve.
+          </p>
+          <p>
+            On the defensive side, I'm building knowledge in <strong>digital forensics</strong> — network
+            investigation and endpoint analysis — because a good attacker understands the investigator.
+          </p>
+        </div>
+        <aside class="status-box reveal" aria-label="Quick facts">
+          <div class="bar" aria-hidden="true">
+            <span class="dot" style="background:#ff5f56"></span>
+            <span class="dot" style="background:#e8b454"></span>
+            <span class="dot" style="background:#4ade80"></span>
+            <span style="margin-left:auto;font-size:12px">~/status</span>
+          </div>
+          <div class="row"><span class="k">user</span><span class="v">sh1n0b1Xby73</span></div>
+          <div class="row"><span class="k">status</span><span class="v">3rd-year student @ UCSY</span></div>
+          <div class="row"><span class="k">focus</span><span class="v">web security · red teaming</span></div>
+          <div class="row"><span class="k">playing</span><span class="v">CTFs</span></div>
+          <div class="row"><span class="k">location</span><span class="v">Yangon, Myanmar</span></div>
+          <div class="row"><span class="k">github</span><span class="v"><a href="https://github.com/Nyi-001" target="_blank" rel="noopener">Nyi-001</a></span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS
+       ============================================================ -->
+  <section id="skills" class="alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">02.</span><h2>skills</h2><span class="line"></span>
+      </div>
+      <p class="sec-sub reveal">The toolbox so far — growing every semester.</p>
+
+      <div class="skill-group reveal">
+        <h3>Offensive</h3>
+        <div class="tags">
+          <span class="tag">Web Security</span>
+          <span class="tag">Penetration Testing</span>
+          <span class="tag">Red Teaming (aspiring)</span>
+          <span class="tag">Recon &amp; OSINT</span>
+          <span class="tag">Burp Suite</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Defensive</h3>
+        <div class="tags">
+          <span class="tag">Digital Forensics</span>
+          <span class="tag">Network Analysis</span>
+          <span class="tag">Endpoint Analysis</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">Log Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Languages &amp; Tools</h3>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PHP</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Bash</span>
+          <span class="tag">Linux (Kali)</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE & EDUCATION
+       ============================================================ -->
+  <section id="journey">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">03.</span><h2>journey</h2><span class="line"></span>
+      </div>
+      <p class="sec-sub reveal">Experience and education, in order.</p>
+      <div class="timeline">
+        <!-- copy a .t-item block to add an entry -->
+        <div class="t-item reveal">
+          <span class="t-date">2023 — 2027 (expected)</span>
+          <h3>B.C.Sc. in Cyber Security</h3>
+          <div class="t-sub">University of Computer Studies, Yangon</div>
+          <p>Third year. Coursework across web security, networking, cryptography and digital forensics.</p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">2026</span>
+          <h3>UCSY CTF 2026</h3>
+          <div class="t-sub">CTF Player</div>
+          <p>Competed in the university CTF and published writeups of solved challenges.</p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">2025 — present</span>
+          <h3>Web Security Practice</h3>
+          <div class="t-sub">Self-driven · PortSwigger Web Security Academy</div>
+          <p>Solving academy labs and keeping detailed notes of every technique — public in my repos.</p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">future</span>
+          <h3>Internship</h3>
+          <div class="t-sub">Red team / security intern — this space is reserved</div>
+          <p>Looking for an internship where I can break (and help fix) real systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATIONS & COURSES
+       ============================================================ -->
+  <section id="certs" class="alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">04.</span><h2>certifications</h2><span class="line"></span>
+      </div>
+      <p class="sec-sub reveal">Completed courses and certificates. Placeholders for now — see the README for the 2-minute way to add one.</p>
+      <div class="grid">
+        <!-- To add a real cert: put the image in certs/ (e.g. certs/oswe.png) and replace a placeholder card:
+        <div class="card">
+          <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate" loading="lazy"></div>
+          <h3>Offensive Security Web Expert</h3>
+          <p>Advanced web application attacks and exploitation.</p>
+          <div class="card-meta"><span>OffSec · 2026</span><a class="read-more" href="#" target="_blank" rel="noopener">verify ↗</a></div>
+        </div>
+        -->
+        <div class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+          <h3>Your Certification</h3>
+          <p>Add the image to <code>certs/</code> and un-comment the example card above.</p>
+          <div class="card-meta"><span>issuer · year</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Your Certification</h3>
+          <p>Add the image to <code>certs/</code> and un-comment the example card above.</p>
+          <div class="card-meta"><span>issuer · year</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <h3>Your Course / Certificate</h3>
+          <p>Add the image to <code>certs/</code> and un-comment the example card above.</p>
+          <div class="card-meta"><span>issuer · year</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WRITE-UPS & BLOG  (the main event)
+       ============================================================ -->
+  <section id="writeups">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">05.</span><h2>writeups &amp; blog</h2><span class="line"></span>
+      </div>
+      <p class="sec-sub reveal">Everything I solve gets documented — challenges, labs, and investigations.</p>
+
+      <!-- featured writeup -->
+      <article class="featured reveal">
+        <div class="f-body">
+          <span class="flag">Featured Writeup</span>
+          <h3><a href="https://github.com/Nyi-001/UCSYCTF2026-writeups" target="_blank" rel="noopener">UCSY CTF 2026 — Writeups</a></h3>
+          <p>
+            Writeups of the challenges I solved at the university CTF — the thought process,
+            the failed attempts, and the final payloads. A reference for anyone starting out.
+          </p>
+          <div class="f-meta">
+            <span>📅 2026-07-14</span>
+            <span>🏷 ctf · writeups</span>
+            <span>⏱ 12 min read</span>
+          </div>
+        </div>
+        <div class="f-aside">
+          <h4>in this repo</h4>
+          <ul>
+            <li>Solved challenges, step by step</li>
+            <li>Payloads &amp; scripts used</li>
+            <li>Lessons learned</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- writeup / post grid -->
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <h3><a href="https://github.com/Nyi-001/PortSwigger-Labs-Notes" target="_blank" rel="noopener">PortSwigger Labs — Solving Notes</a></h3>
+          <p>Notes on Web Security Academy labs: the vulnerability, the approach, and the solution.</p>
+          <div class="card-meta">
+            <span>2026-06-29</span>
+            <a class="read-more" href="https://github.com/Nyi-001/PortSwigger-Labs-Notes" target="_blank" rel="noopener">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <h3><a href="https://github.com/Nyi-001/Forensic-Investigation" target="_blank" rel="noopener">Network Forensics — Investigation Notes</a></h3>
+          <p>Network forensic investigation notes: traffic analysis workflows and case walkthroughs.</p>
+          <div class="card-meta">
+            <span>2026-05-04</span>
+            <a class="read-more" href="https://github.com/Nyi-001/Forensic-Investigation" target="_blank" rel="noopener">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <h3><a href="https://github.com/Nyi-001/Advance-Endpoint-Analysis" target="_blank" rel="noopener">Endpoint Analysis — Techniques &amp; Notes</a></h3>
+          <p>Endpoint analysis techniques and notes from labs and exercises.</p>
+          <div class="card-meta">
+            <span>2026-07-18</span>
+            <a class="read-more" href="https://github.com/Nyi-001/Advance-Endpoint-Analysis" target="_blank" rel="noopener">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3><a href="blog/hello-world.html">Hello, world — launching this site</a></h3>
+          <p>Why I'm building a public portfolio, and how posts get published here.</p>
+          <div class="card-meta">
+            <span>2026-10-04</span>
+            <a class="read-more" href="blog/hello-world.html">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3><a href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">SP1D3R — Web Security Testing Assistant</a></h3>
+          <p>Tool release notes: scoped web/API assessments with clean HTML/PDF/JSON reporting.</p>
+          <div class="card-meta">
+            <span>2026-09-06</span>
+            <a class="read-more" href="https://github.com/Nyi-001/SP1D3R" target="_blank" rel="noopener">Read More <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- EXAMPLE — how to add a post:
+        <article class="card">
+          <div class="card-icon">...icon...</div>
+          <h3><a href="blog/my-post.html">Title of my post</a></h3>
+          <p>Short excerpt shown on the homepage.</p>
+          <div class="card-meta">
+            <span>2026-10-10</span>
+            <a class="read-more" href="blog/my-post.html">Read More →</a>
+          </div>
+        </article>
+        -->
+
+        <article class="card reveal">
+          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3>Next writeup — in progress</h3>
+          <p>New CTF writeups and lab deep-dives are on the way.</p>
+          <div class="card-meta"><span>soon</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section id="contact" class="alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="num">06.</span><h2>contact</h2><span class="line"></span>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's talk</h3>
+          <p>
+            Open to CTF teams, security projects, and internships. The fastest
+            way to reach me is GitHub or email.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/Nyi-001" target="_blank" rel="noopener">
+              <svg class="icon filled" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              github.com/Nyi-001
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <svg class="icon filled" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+              linkedin.com/in/yourname
+            </a>
+            <a href="mailto:you@example.com">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+              you@example.com
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label>name
+            <input type="text" name="name" placeholder="your name" required>
+          </label>
+          <label>email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <label>message
+            <textarea name="message" placeholder="say something..." required></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send Message
+            <svg class="icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="hint">Opens your mail app — replace <code>you@example.com</code> in index.html with your real email.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer>
   <div class="container">
-    © 2026 sh1n0b1Xby73 · Built with <span class="heart">♥</span> and plain HTML/CSS · Hosted on GitHub Pages
+    <span>© <span id="year">2026</span> sh1n0b1Xby73 · built by hand — no frameworks</span>
+    <a href="#top">back to top ↑</a>
   </div>
 </footer>
 
 <script>
-// ---------- theme toggle ----------
-(function () {
-  var saved = null;
-  try { saved = localStorage.getItem("theme"); } catch (e) {}
-  if (saved === "light") document.body.classList.add("light");
-  var btn = document.getElementById("themeToggle");
-  var moon = document.getElementById("iconMoon");
-  var sun = document.getElementById("iconSun");
-  function sync() {
-    var light = document.body.classList.contains("light");
-    moon.style.display = light ? "none" : "";
-    sun.style.display = light ? "" : "none";
-  }
-  sync();
-  btn.addEventListener("click", function () {
-    document.body.classList.toggle("light");
-    try { localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark"); } catch (e) {}
-    sync();
-  });
-})();
+/* ============================================================
+   small vanilla JS — no libraries
+   ============================================================ */
 
-// ---------- mobile nav ----------
+// ---------- mobile menu ----------
 (function () {
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
-  toggle.addEventListener("click", function () { links.classList.toggle("open"); });
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
   links.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") links.classList.remove("open");
+    if (e.target.closest("a")) {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
   });
 })();
 
-// ---------- typewriter ----------
+// ---------- fade-in on scroll ----------
 (function () {
-  var roles = ["Cybersecurity Student", "Web App Pentester", "CTF Player", "Digital Forensics Enthusiast", "Python Scripter"];
-  var el = document.getElementById("typed");
-  var ri = 0, ci = 0, deleting = false;
-  function tick() {
-    el.textContent = roles[ri].slice(0, ci);
-    if (!deleting) {
-      ci++;
-      if (ci > roles[ri].length) { deleting = true; return setTimeout(tick, 1700); }
-      return setTimeout(tick, 65 + Math.random() * 55);
-    }
-    ci--;
-    if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; return setTimeout(tick, 320); }
-    setTimeout(tick, 32);
-  }
-  tick();
-})();
-
-// ---------- reveal on scroll + skill bars + active nav ----------
-(function () {
-  var reveals = document.querySelectorAll(".reveal");
-  var fills = document.querySelectorAll(".fill");
-  var sections = document.querySelectorAll("section[id]");
-  var navAnchors = document.querySelectorAll(".nav-links a");
+  var targets = document.querySelectorAll(".reveal");
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) {
-        en.target.classList.add("visible");
-        if (en.target.classList.contains("fill")) en.target.style.width = en.target.dataset.width + "%";
-        io.unobserve(en.target);
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  reveals.forEach(function (el) { io.observe(el); });
-  fills.forEach(function (el) { io.observe(el); });
+  }, { threshold: 0.1 });
+  targets.forEach(function (el) { io.observe(el); });
+})();
 
-  var secIO = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) {
-        var id = en.target.id;
-        navAnchors.forEach(function (a) {
-          a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+// ---------- highlight the nav link of the section in view ----------
+(function () {
+  var sections = document.querySelectorAll("section[id]");
+  var links = document.querySelectorAll(".nav-links a");
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function (a) {
+          a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
         });
       }
     });
-  }, { rootMargin: "-40% 0px -55% 0px" });
-  sections.forEach(function (s) { secIO.observe(s); });
+  }, { rootMargin: "-35% 0px -60% 0px" });
+  sections.forEach(function (s) { io.observe(s); });
 })();
+
+// ---------- contact form → opens mail app ----------
+// CHANGE the email address in the first line to receive messages.
+(function () {
+  var TO = "you@example.com";
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target;
+    var subject = "[portfolio] message from " + f.name.value;
+    var body = "From: " + f.name.value + " (" + f.email.value + ")\n\n" + f.message.value;
+    window.location.href = "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  });
+})();
+
+// ---------- current year in footer ----------
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
