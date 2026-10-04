@@ -191,35 +191,25 @@ section[id] { scroll-margin-top: 76px; }
   gap: 16px;
 }
 
-.logo { font-family: var(--mono); font-size: 17px; font-weight: 600; color: var(--heading); display: inline-flex; align-items: center; gap: 10px; }
+.logo { font-family: var(--mono); font-size: 17px; font-weight: 600; color: var(--heading); }
 .logo:hover { text-decoration: none; }
 .logo .prompt { color: var(--accent); }
 
-/* round profile photo in the top-left of the navbar */
-.nav-avatar {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1.5px solid var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-dim);
-}
-
-/* hero: profile photo beside the name */
-.hero-name {
+/* hero: circular profile photo beside the title line */
+.hero-title {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(16px, 3vw, 26px);
+  gap: 14px;
 }
-.hero-name h1 { margin-bottom: 0; }
+.hero-title .title { margin-bottom: 0; }
 .hero-avatar {
-  width: clamp(76px, 13vw, 112px);
-  height: clamp(76px, 13vw, 112px);
+  width: 46px; height: 46px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
-  box-shadow: 0 0 0 5px var(--accent-dim), 0 0 36px rgba(74, 222, 128, .22);
+  box-shadow: 0 0 0 3px var(--accent-dim), 0 0 18px rgba(74, 222, 128, .18);
 }
 
 .nav-links { display: flex; gap: 24px; list-style: none; }
