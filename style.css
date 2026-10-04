@@ -588,6 +588,15 @@ body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, 
   display: block;
 }
 
+/* writeup sub-headings (e.g. HackMD / repositories) */
+.writeup-sub {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--heading);
+  margin: 44px 0 18px;
+}
+.writeup-sub::before { content: "## "; color: var(--accent); }
+
 /* ---------- featured writeup ---------- */
 .featured {
   display: grid;

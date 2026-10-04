@@ -70,6 +70,12 @@ cards with the example card that's commented out above them:
 - Writeup card: copy any `.card` in the `writeups` grid.
 - Most cards and entries have a commented example right next to them.
 
+### HackMD writeups
+The "HackMD — lab writeups" block mirrors your notes from
+[hackmd.io/@sh1n0b1Xby73](https://hackmd.io/@sh1n0b1Xby73). It's a static list,
+so when you publish a new note there, either copy a card in `index.html` and
+link the new note, or ask Claude to re-sync the profile for you.
+
 ### Contact form & email
 The form opens the visitor's mail app with the message pre-filled and sends
 to `ny1m1nh737@gmail.com`. If you change your address later, it appears in
