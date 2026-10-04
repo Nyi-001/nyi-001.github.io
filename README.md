@@ -27,6 +27,10 @@ Everything is hosted straight from this repo by GitHub Pages (branch: `main`, ro
 The page reads the `certs/` folder through GitHub's public API, so this
 works with no local setup at all. (Hard-refresh the page if you just uploaded.)
 
+Each card gets a **category chip** detected from the filename — name your
+file with a keyword and it colors itself: `web`, `api`, `network`, `forensic`,
+`stego`, `pentest`, `osint` (e.g. `API-RTA.pdf` → "api security" chip).
+
 ### ...or hand-write the card (full control over title / issuer / verify link)
 In `index.html`, in the `certs` section, replace one of the placeholder
 cards with the example card that's commented out above them:

@@ -336,7 +336,7 @@
           <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate" loading="lazy"></div>
           <h3>Offensive Security Web Expert</h3>
           <p>Advanced web application attacks and exploitation.</p>
-          <div class="card-meta"><span>OffSec · 2026</span><a class="read-more" href="#" target="_blank" rel="noopener">verify ↗</a></div>
+          <div class="card-meta"><span class="chip-cat cat-web">web security</span><a class="read-more" href="#" target="_blank" rel="noopener">verify ↗</a></div>
         </div>
         -->
         <div class="card reveal cert-placeholder">
@@ -621,10 +621,29 @@
 // ---------- certifications: auto-render files uploaded to certs/ ----------
 // Upload an image or PDF to the certs/ folder using the GitHub website and
 // the card appears here automatically — no HTML editing needed.
+// The card gets a category chip detected from the filename.
 (function () {
   var grid = document.getElementById("certGrid");
   if (!grid) return;
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return "&#" + c.charCodeAt(0) + ";"; }); }
+
+  // filename keywords → category class + label (colors defined in style.css)
+  var CATS = [
+    [/web|owasp|burp|portswigger/i, "cat-web", "web security"],
+    [/api|rest|graphql|rta/i, "cat-api", "api security"],
+    [/net|network|ccna|wireshark/i, "cat-network", "networking"],
+    [/forensic|forensics/i, "cat-forensic", "forensics"],
+    [/stego/i, "cat-stego", "steganography"],
+    [/pentest|red.?team|oscp|osep|eJPT|ejpt/i, "cat-pentest", "pentesting"],
+    [/osint/i, "cat-osint", "osint"]
+  ];
+  function detect(fname) {
+    for (var i = 0; i < CATS.length; i++) {
+      if (CATS[i][0].test(fname)) return { cls: CATS[i][1], label: CATS[i][2] };
+    }
+    return { cls: "cat-general", label: "certificate" };
+  }
+
   fetch("https://api.github.com/repos/Nyi-001/nyi-001.github.io/contents/certs")
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (items) {
@@ -635,18 +654,22 @@
       grid.querySelectorAll(".cert-placeholder").forEach(function (el) { el.remove(); });
       files.forEach(function (f) {
         var name = esc(f.name.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " "));
+        var cat = detect(f.name);
         var card = document.createElement("div");
-        card.className = "card";
+        card.className = "card " + cat.cls;
         if (/\.pdf$/i.test(f.name)) {
           card.innerHTML =
-            '<div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>' +
+            '<div class="pdf-tile"><span class="pdf-label">PDF</span>' +
+            '<svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>' +
             "<h3>" + name + "</h3><p>Certificate document.</p>" +
-            '<div class="card-meta"><a class="read-more" href="' + esc(f.download_url) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';
+            '<div class="card-meta"><span class="chip-cat">' + cat.label + "</span>" +
+            '<a class="read-more" href="' + esc(f.download_url) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';
         } else if (/\.(png|jpe?g|gif|webp|svg)$/i.test(f.name)) {
           card.innerHTML =
-            '<div class="cert-img"><img src="' + esc(f.download_url) + '" alt="' + name + '" loading="lazy"></div>' +
+            '<div class="cert-img"><img src="' + esc(f.download_url) + '" alt="' + name + '" loading="lazy">' +
+            '<span class="badge">CERT</span></div>' +
             "<h3>" + name + "</h3><p>Certificate.</p>" +
-            '<div class="card-meta"><span>certs/' + esc(f.name) + "</span></div>";
+            '<div class="card-meta"><span class="chip-cat">' + cat.label + '</span><span>' + esc(f.name) + "</span></div>";
         } else { return; }
         grid.appendChild(card);
       });
