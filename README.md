@@ -71,11 +71,13 @@ cards with the example card that's commented out above them:
 - Writeup card: copy any `.card` in the `writeups` grid.
 - Most cards and entries have a commented example right next to them.
 
-### HackMD writeups
-The "HackMD — lab writeups" block mirrors your notes from
-[hackmd.io/@sh1n0b1Xby73](https://hackmd.io/@sh1n0b1Xby73). It's a static list,
-so when you publish a new note there, either copy a card in `index.html` and
-link the new note, or ask Claude to re-sync the profile for you.
+### Writeups & HackMD
+Writeups are **grouped by category** — currently a "Web Security" group with
+your notes from [hackmd.io/@sh1n0b1Xby73](https://hackmd.io/@sh1n0b1Xby73).
+To add a new category, copy the whole group pattern (sub-head + grid) in the
+`writeups` section and change the heading and chip classes. It's a static list,
+so when you publish a new note, either copy a card and link it, or ask Claude
+to re-sync the profile for you.
 
 ### Contact form & email
 The form opens the visitor's mail app with the message pre-filled and sends
