@@ -191,9 +191,18 @@ section[id] { scroll-margin-top: 76px; }
   gap: 16px;
 }
 
-.logo { font-family: var(--mono); font-size: 17px; font-weight: 600; color: var(--heading); }
+.logo { font-family: var(--mono); font-size: 17px; font-weight: 600; color: var(--heading); display: inline-flex; align-items: center; gap: 10px; }
 .logo:hover { text-decoration: none; }
 .logo .prompt { color: var(--accent); }
+
+/* round profile photo in the top-left of the navbar */
+.nav-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
 
 .nav-links { display: flex; gap: 24px; list-style: none; }
 .nav-links a {
