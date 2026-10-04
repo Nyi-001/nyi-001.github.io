@@ -18,18 +18,26 @@ Everything is hosted straight from this repo by GitHub Pages (branch: `main`, ro
 
 ## How to update
 
-### Add a certification
-1. Put the image in `certs/` (e.g. `certs/oswe.png`)
-2. In `index.html`, in the `certs` section, replace one of the placeholder
-   cards with the example card that's commented out above them:
-   ```html
-   <div class="card">
-     <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate" loading="lazy"></div>
-     <h3>Offensive Security Web Expert</h3>
-     <p>Advanced web application attacks and exploitation.</p>
-     <div class="card-meta"><span>OffSec · 2026</span><a class="read-more" href="#">verify ↗</a></div>
-   </div>
-   ```
+### Add a certification — easiest way (GitHub website, zero code)
+1. Open the repo on github.com → click the **`certs`** folder →
+   **Add file → Upload files** → drag your cert in (PNG/JPG/PDF) → **Commit changes**.
+2. Done. The card appears on the site automatically within a minute —
+   the title comes from the filename (`oswe-cert.png` → "oswe cert").
+
+The page reads the `certs/` folder through GitHub's public API, so this
+works with no local setup at all. (Hard-refresh the page if you just uploaded.)
+
+### ...or hand-write the card (full control over title / issuer / verify link)
+In `index.html`, in the `certs` section, replace one of the placeholder
+cards with the example card that's commented out above them:
+```html
+<div class="card">
+  <div class="cert-img"><img src="certs/oswe.png" alt="OSWE certificate" loading="lazy"></div>
+  <h3>Offensive Security Web Expert</h3>
+  <p>Advanced web application attacks and exploitation.</p>
+  <div class="card-meta"><span>OffSec · 2026</span><a class="read-more" href="#">verify ↗</a></div>
+</div>
+```
 
 ### Publish a writeup / blog post
 1. Copy the template: `cp blog/hello-world.html blog/my-post.html`
