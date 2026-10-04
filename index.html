@@ -644,6 +644,18 @@
     return { cls: "cat-general", label: "certificate" };
   }
 
+  // hand-drawn line-art cover for each category (120×80, inherits card color)
+  var ART = {
+    "cat-api": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M38 18c-9 0-14 8-14 22s5 22 14 22" opacity=".85"/><path d="M82 18c9 0 14 8 14 22s-5 22-14 22" opacity=".85"/><circle cx="52" cy="26" r="3" fill="currentColor" stroke="none"/><circle cx="68" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="52" cy="54" r="3" fill="currentColor" stroke="none"/><path d="M52 26l16 14" opacity=".55"/><path d="M68 40l-16 14" opacity=".55"/></svg>',
+    "cat-web": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="32" r="24" opacity=".85"/><ellipse cx="60" cy="32" rx="11" ry="24" opacity=".5"/><path d="M36 32h48" opacity=".5"/><rect x="52" y="44" width="16" height="12" rx="2"/><path d="M55 44v-4a5 5 0 0 1 10 0v4"/></svg>',
+    "cat-network": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="30" r="4"/><circle cx="60" cy="58" r="4"/><circle cx="92" cy="30" r="4"/><path d="M28 30l32 28 32-28" opacity=".55"/><path d="M28 30h64" opacity=".4"/><circle cx="44" cy="44" r="2.5" fill="currentColor" stroke="none" opacity=".85"/><circle cx="76" cy="44" r="2.5" fill="currentColor" stroke="none" opacity=".85"/></svg>',
+    "cat-forensic": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="46" cy="44" r="17" opacity=".85"/><path d="M59 57l20 20" opacity=".85"/><circle cx="40" cy="40" r="2.5" fill="currentColor" stroke="none" opacity=".8"/><circle cx="47" cy="49" r="2.5" fill="currentColor" stroke="none" opacity=".8"/><circle cx="53" cy="38" r="2.5" fill="currentColor" stroke="none" opacity=".8"/></svg>',
+    "cat-stego": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="28" y="18" width="46" height="42" rx="4" opacity=".9"/><rect x="46" y="28" width="46" height="42" rx="4" opacity=".35"/><circle cx="60" cy="49" r="7" opacity=".7"/><circle cx="60" cy="49" r="2.2" fill="currentColor" stroke="none" opacity=".9"/></svg>',
+    "cat-pentest": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M60 14l26 9v22c0 14-11 24-26 29-15-5-26-15-26-29V23z" opacity=".9"/><circle cx="60" cy="42" r="13" opacity=".5"/><path d="M60 29v26" opacity=".5"/><path d="M47 42h26" opacity=".5"/></svg>',
+    "cat-osint": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M60 52a18 18 0 0 1 0-36" opacity=".4"/><path d="M60 52a26 26 0 0 1 0-52" opacity=".25"/><path d="M60 52l20-14" opacity=".7"/><circle cx="74" cy="32" r="3" fill="currentColor" stroke="none"/></svg>',
+    "cat-general": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="14" width="52" height="52" rx="4" opacity=".9"/><circle cx="60" cy="40" r="12" opacity=".7"/><path d="M55 40l4 4 7-8" opacity=".9"/></svg>'
+  };
+
   fetch("https://api.github.com/repos/Nyi-001/nyi-001.github.io/contents/certs")
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (items) {
@@ -659,8 +671,7 @@
         card.className = "card " + cat.cls;
         if (/\.pdf$/i.test(f.name)) {
           card.innerHTML =
-            '<div class="pdf-tile"><span class="pdf-label">PDF</span>' +
-            '<svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>' +
+            '<div class="cert-art">' + (ART[cat.cls] || ART["cat-general"]) + "</div>" +
             "<h3>" + name + "</h3><p>Certificate document.</p>" +
             '<div class="card-meta"><span class="chip-cat">' + cat.label + "</span>" +
             '<a class="read-more" href="' + esc(f.download_url) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';

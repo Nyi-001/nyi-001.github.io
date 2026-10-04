@@ -552,8 +552,8 @@ section.alt { background: var(--bg-2); border-top: 1px solid var(--border); bord
 }
 body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, #000); }
 
-/* PDF tile — themed document placeholder instead of a plain icon */
-.pdf-tile {
+/* themed art tile — category illustration as the cert cover (not plain) */
+.cert-art {
   position: relative;
   aspect-ratio: 3 / 2;
   border-radius: 6px;
@@ -568,12 +568,10 @@ body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   margin-bottom: 16px;
   color: var(--cat, var(--accent));
 }
-.pdf-tile .pdf-label { font-family: var(--mono); font-weight: 700; font-size: 26px; letter-spacing: 2px; }
-.pdf-tile .icon { width: 26px; height: 26px; }
+.cert-art svg { width: 66%; height: 66%; }
 
 /* ---------- featured writeup ---------- */
 .featured {
