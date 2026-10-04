@@ -669,11 +669,22 @@
         var card = document.createElement("div");
         card.className = "card " + cat.cls;
         if (/\.pdf$/i.test(f.name)) {
+          var base = esc(f.name.replace(/\.pdf$/i, ""));
           card.innerHTML =
-            '<div class="cert-art">' + (ART[cat.cls] || ART["cat-general"]) + "</div>" +
+            '<div class="cert-preview">' +
+              '<div class="art-fallback">' + (ART[cat.cls] || ART["cat-general"]) + "</div>" +
+              '<img src="certs/previews/' + base + '.png" alt="' + name + '" loading="lazy" data-try="png">' +
+            "</div>" +
             "<h3>" + name + "</h3><p>Certificate document.</p>" +
             '<div class="card-meta"><span class="chip-cat">' + cat.label + "</span>" +
             '<a class="read-more" href="' + esc(f.download_url) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';
+          // preview chain: png → jpg → webp → hide (art fallback shows)
+          var img = card.querySelector("img");
+          img.onerror = function () {
+            if (img.dataset.try === "png") { img.dataset.try = "jpg"; img.src = "certs/previews/" + base + ".jpg"; }
+            else if (img.dataset.try === "jpg") { img.dataset.try = "webp"; img.src = "certs/previews/" + base + ".webp"; }
+            else { img.remove(); }
+          };
         } else if (/\.(png|jpe?g|gif|webp|svg)$/i.test(f.name)) {
           card.innerHTML =
             '<div class="cert-img"><img src="' + esc(f.download_url) + '" alt="' + name + '" loading="lazy">' +

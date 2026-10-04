@@ -31,6 +31,20 @@ Each card gets a **category chip** detected from the filename — name your
 file with a keyword and it colors itself: `web`, `api`, `network`, `forensic`,
 `stego`, `pentest`, `osint` (e.g. `API-RTA.pdf` → "api security" chip).
 
+### PDF preview thumbnail
+If a PDF needs a preview image on its card, put one in `certs/previews/`
+with the **same base name** (`API-RTA.pdf` → `certs/previews/API-RTA.png`,
+`.jpg`, or `.webp`). The card shows it as a thumbnail; without one it shows
+the category illustration instead. Generate one locally with:
+
+```bash
+pdftoppm -singlefile -jpeg -r 110 certs/API-RTA.pdf certs/previews/API-RTA
+# then shrink it (a 900px-wide card is plenty):
+convert certs/previews/API-RTA.jpg -resize 900x -quality 82 certs/previews/API-RTA.jpg
+```
+
+(or just ask Claude to generate the preview for you.)
+
 ### ...or hand-write the card (full control over title / issuer / verify link)
 In `index.html`, in the `certs` section, replace one of the placeholder
 cards with the example card that's commented out above them:

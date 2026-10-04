@@ -552,11 +552,13 @@ section.alt { background: var(--bg-2); border-top: 1px solid var(--border); bord
 }
 body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, #000); }
 
-/* themed art tile — category illustration as the cert cover (not plain) */
-.cert-art {
+/* PDF preview tile — real thumbnail of the cert; category art behind it
+   shows while loading or when no preview image exists */
+.cert-preview {
   position: relative;
   aspect-ratio: 3 / 2;
   border-radius: 6px;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-color: color-mix(in srgb, var(--cat, var(--accent)) 32%, var(--border));
   background: var(--bg-2);
@@ -565,13 +567,26 @@ body.light .chip-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 60%, 
       color-mix(in srgb, var(--cat, var(--accent)) 6%, transparent) 0 10px,
       transparent 10px 20px),
     color-mix(in srgb, var(--cat, var(--accent)) 9%, var(--bg-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 16px;
   color: var(--cat, var(--accent));
 }
-.cert-art svg { width: 66%; height: 66%; }
+.cert-preview .art-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-preview .art-fallback svg { width: 66%; height: 66%; }
+.cert-preview img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
 
 /* ---------- featured writeup ---------- */
 .featured {
