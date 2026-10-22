@@ -651,9 +651,9 @@
   });
 })();
 
-// ---------- certifications: auto-render files uploaded to certs/ ----------
-// Upload an image or PDF to the certs/ folder using the GitHub website and
-// the card appears here automatically — no HTML editing needed.
+// ---------- certifications: render certs listed in certs/certs.json ----------
+// To add a cert: upload the file to certs/ (preview image to certs/previews/),
+// then append { "name": "file.pdf" } to certs/certs.json.
 // The card gets a category chip detected from the filename.
 (function () {
   var grid = document.getElementById("certGrid");
@@ -689,11 +689,13 @@
     "cat-general": '<svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="14" width="52" height="52" rx="4" opacity=".9"/><circle cx="60" cy="40" r="12" opacity=".7"/><path d="M55 40l4 4 7-8" opacity=".9"/></svg>'
   };
 
-  fetch("https://api.github.com/repos/Nyi-001/nyi-001.github.io/contents/certs")
+  // Local manifest instead of the GitHub contents API — the repo is private,
+  // so unauthenticated API calls would 401.
+  fetch("certs/certs.json")
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (items) {
       if (!Array.isArray(items)) return;
-      var files = items.filter(function (i) { return i.type === "file" && !/^\./.test(i.name); });
+      var files = items.filter(function (i) { return i && i.name && !/^\./.test(i.name); });
       if (!files.length) return;
       // real files exist — remove the "Your Certification" placeholders
       grid.querySelectorAll(".cert-placeholder").forEach(function (el) { el.remove(); });
@@ -711,7 +713,7 @@
             "</div>" +
             "<h3>" + name + "</h3><p>Certificate document.</p>" +
             '<div class="card-meta"><span class="chip-cat">' + cat.label + "</span>" +
-            '<a class="read-more" href="' + esc(f.download_url) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';
+            '<a class="read-more" href="certs/' + encodeURIComponent(f.name) + '" target="_blank" rel="noopener">View PDF ↗</a></div>';
           // preview chain: png → jpg → webp → hide (art fallback shows)
           var img = card.querySelector("img");
           img.onerror = function () {
@@ -721,7 +723,7 @@
           };
         } else if (/\.(png|jpe?g|gif|webp|svg)$/i.test(f.name)) {
           card.innerHTML =
-            '<div class="cert-img"><img src="' + esc(f.download_url) + '" alt="' + name + '" loading="lazy">' +
+            '<div class="cert-img"><img src="certs/' + encodeURIComponent(f.name) + '" alt="' + name + '" loading="lazy">' +
             '<span class="badge">CERT</span></div>' +
             "<h3>" + name + "</h3><p>Certificate.</p>" +
             '<div class="card-meta"><span class="chip-cat">' + cat.label + '</span><span>' + esc(f.name) + "</span></div>";
